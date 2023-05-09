@@ -7,7 +7,7 @@ console.log(sum([1, 2]));
 
 class Character {
   constructor(name, type) {
-    const types = [Bowman, Swordsman, Magician, Daemon, Undead, Zombie]
+    const types = ['Bowman', 'Swordsman', 'Magician', 'Daemon', 'Undead', 'Zombie']
 
     if (typeof name === 'string' && name.length >= 2 && name.length <= 10) {
       this.name = name;
@@ -95,9 +95,11 @@ class Daemon extends Character {
   }
 }
 
-const bowman1 = new Bowman('bow', Bowman);
+const bowman1 = new Bowman('bow', 'Bowman');
 console.log(bowman1);
 bowman1.levelUp();
 console.log(bowman1);
 bowman1.damage(31);
 console.log(bowman1);
+
+export { Bowman };
